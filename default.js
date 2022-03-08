@@ -24,25 +24,18 @@ async function sendRequest(url, method, data){
 
 function loadUser(){
     let userid = window.localStorage.getItem('userid');
-    if(userid){
-        getMyPokemon();
+    if(userid && userid !== ""){
         document.querySelector('#student_id').value = userid;
     }
 }
 
-function setId(userId){
-    window.localStorage.setItem('userid', userId);
-    let id_input = document.querySelector('#student_id');
-    id_input.value = student_id;
-}
-
 //gets the id from the id text field or prompts the user if the field is empty
 function getId(){
-    
-    let student_id = window.localStorage.getItem('userid');
+    let student_id = document.querySelector('#student_id').value;
+
     if(!student_id){
         student_id = prompt("Please enter student ID");
-        setId(student_id);
+        document.querySelector('#student_id').value = student_id;
     }
     return student_id;
 }

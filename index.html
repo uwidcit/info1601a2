@@ -46,12 +46,16 @@
 
   <body>
       <ul id="listing" class="sidenav sidenav-fixed collection">
+
+        <!-- Begin List Template -->
         <a href="#listing" id="bulbasaur" onclick="getPokemon('1')" class="collection-item">bulbasaur</a>
+        <!-- End List Template -->
+
       </ul>
 
       <nav class="teal nav-wrapper row" style="padding:10px; margin-bottom:0;">
 
-        <form onsubmit="getMyPokemon(event)" target="lol" >
+        <form onsubmit="event.preventDefault(); getMyPokemon()">
             <div class="col s2">
               <a href="#" data-target="listing" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             </div>
@@ -70,6 +74,8 @@
     
       <div class="row" style="height:100%; margin:0">
           <article class="col s12 m6 l4" id="result" style="min-height:80%">
+
+            <!-- Begin Card Template -->
             <div class="card">
                 <div class="card-image">
                     <img class="teal" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="bulbasaur Image">  
@@ -84,6 +90,8 @@
                     </a>
                 </div>
             </div>
+            <!-- End Card Template -->
+
           </article>
 
           <article class="col s12 m6">
@@ -97,6 +105,8 @@
                   </thead>
       
                   <tbody id="myPokeListing">
+
+                    <!-- Begin Table Row Template -->
                     <tr>
                       <td>rocky</td>
                       <td>onix</td>
@@ -104,6 +114,8 @@
                         <button class="waves-effect waves-light btn" id="loadBtn" onclick="releasePokemon(5)">Release</button>
                       </td>
                     </tr>
+                    <!-- End Table Row Template -->
+
                   </tbody>
                 </table>
           </article> 
