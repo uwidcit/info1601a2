@@ -14,6 +14,7 @@
   "dependencies": {
     "chai": "^4.2.0",
     "minimist": ">=1.2.5",
-    "puppeteer": "^13.4.1"
+    "puppeteer": "^13.4.1",
+    "testsuite2": "^1.0.0"
   }
 }
