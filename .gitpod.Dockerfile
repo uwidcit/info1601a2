@@ -18,3 +18,4 @@ RUN sudo apt-get update \
 USER gitpod
 RUN npm i -g mocha
 RUN npm i -g mocha puppeteer
+RUN npm i -g live-server
