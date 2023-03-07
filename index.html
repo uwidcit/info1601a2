@@ -10,13 +10,12 @@
 <body>
 
     <header>
-        Header
+        <h1>Poke App</h1>
     </header>
 
     <main>
-        
-        <aside>
-            <div class="collection">
+                
+        <aside class="collection">
             
                 <div class="list-item">
                     <a href="#1" class="collection-item">Bulbasaur</a>
@@ -118,11 +117,10 @@
                     <a href="#25" class="collection-item">Pikachu</a>
                 </div>
                     
-            </div>
         </aside>
 
         <section>
-            <p class="text-center">Selected Pokemon</p>
+            <h1>Selected Pokemon</h1>
     
             <div class="card">
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Pokemon picture">
@@ -136,7 +134,7 @@
                 <div class="card-action">
                     <form id="captureForm">
                         <div>
-                            <input id="pokemon_name" type="text" placeholder="Enter Name" name="pokemon_name" required>
+                            <input id="pokemon_name" class="text-input"  type="text" placeholder="Enter Name" name="pokemon_name" required>
                             <input type="hidden" name="pokemon_id" value="1">
                         </div>
                         <div>
@@ -148,7 +146,9 @@
         </section>
 
         <section>
-            <table>
+            <h1>Your Pokemon</h1>
+
+            <table id="captured-pokemon">
                 <thead>
                     <tr>
                         <th>Pokemon</th>
@@ -160,14 +160,14 @@
                     <tr>
                         <td>Charizard</td>
                         <td>Roy</td>
-                        <td>
+                        <td class="release-column">
                             <form>
-                                <input type="text" placeholder="Enter new name" name="pokemon_name" required>
-                                <input type="submit" value="Rename">
+                                <input type="text" class="text-input" placeholder="Enter new name" name="pokemon_name" required>
+                                <input class="btn" type="submit" value="Rename">
                             </form>
                         </td>
                         <td>
-                            <a href="#release">Release</a>
+                            <a class="btn" href="#release">Release</a>
                         </td>
                     </tr>
                 </tbody>
@@ -177,7 +177,7 @@
     </main>
 
     <footer>
-        Footer
+        <h1>Copywright</h1>
     </footer>
 
 </body>
