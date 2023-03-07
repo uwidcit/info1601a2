@@ -1,12 +1,11 @@
 {
-  "name": "info1601a2",
+  "name": "info1601a1",
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "live-server --host=0.0.0.0 --port=8080 --no-browser",
-    "test": "mocha || exit 0",
-    "update": "npm install --save testsuite2@latest"
+    "test": "mocha || exit 0"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +13,6 @@
   "dependencies": {
     "chai": "^4.2.0",
     "minimist": ">=1.2.5",
-    "puppeteer": "^13.4.1",
-    "testsuite2": "^1.0.0"
+    "puppeteer": "^19.7.3"
   }
 }
