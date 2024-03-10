@@ -1,0 +1,1 @@
+const testsuite2 = require('testsuite2');

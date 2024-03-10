@@ -1,184 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pokemon App</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+ 
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <header>
-        <h1>Poke App</h1>
-    </header>
+ 
+    <title>Poke Dextr</title>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+      body, html{
+        height: 100vh;
+      }
 
-    <main>
-                
-        <aside class="collection">
-            
-                <div class="list-item">
-                    <a href="#1" class="collection-item">Bulbasaur</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#2" class="collection-item">Ivysaur</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#3" class="collection-item">Venusaur</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#4" class="collection-item">Charmander</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#5" class="collection-item">Charmeleon</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#6" class="collection-item">Charizard</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#7" class="collection-item">Squirtle</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#8" class="collection-item">Wartortle</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#9" class="collection-item">Blastoise</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#10" class="collection-item">Caterpie</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#11" class="collection-item">Metapod</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#12" class="collection-item">Butterfree</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#13" class="collection-item">Weedle</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#14" class="collection-item">Kakuna</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#15" class="collection-item">Beedrill</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#16" class="collection-item">Pidgey</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#17" class="collection-item">Pidgeotto</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#18" class="collection-item">Pidgeot</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#19" class="collection-item">Rattata</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#20" class="collection-item">Raticate</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#21" class="collection-item">Spearow</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#22" class="collection-item">Fearow</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#23" class="collection-item">Ekans</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#24" class="collection-item">Arbok</a>
-                </div>
-                
-                <div class="list-item">
-                    <a href="#25" class="collection-item">Pikachu</a>
-                </div>
-                    
-        </aside>
+      #listing{
+        overflow-y: scroll;
+        max-height: 100%;
+      }
+      
+      aside, article{
+        max-height: 25vh;
+      }
+      
+      body {
+        padding-left: 300px;
+      }
 
-        <section>
-            <h1>Selected Pokemon</h1>
-    
-            <div class="card">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Pokemon picture">
-                <div class="card-content">
-                    <span class="card-title">Bulbasaur</span> 
-                    <p>Type1: Grass</p>
-                    <p>Type2: Poison</p>
-                    <p>Weight: 0.7</p>
-                    <p>Height: 6.9</p>
-                </div>
-                <div class="card-action">
-                    <form id="captureForm">
-                        <div>
-                            <input id="pokemon_name" class="text-input"  type="text" placeholder="Enter Name" name="pokemon_name" required>
-                            <input type="hidden" name="pokemon_id" value="1">
-                        </div>
-                        <div>
-                            <input class="btn" id="captureBtn" type="submit" value="Capture">
-                        </div>
-                    </form>
-                </div>
+      nav{
+        height: 70px;
+        margin:0;
+      }
+
+      @media only screen and (max-width : 992px) {
+        body {
+          padding-left: 0;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+      <ul id="listing" class="sidenav sidenav-fixed collection">
+
+        <!-- Begin List Template -->
+          <!-- <a href="#listing" id="bulbasaur" onclick="getPokemon('1')" class="collection-item">bulbasaur</a> -->
+        <!-- End List Template -->
+
+      </ul>
+
+      <nav class="teal nav-wrapper row" style="padding:10px; margin-bottom:0;">
+
+        <form onsubmit="event.preventDefault(); getMyPokemon()">
+            <div class="col s2">
+              <a href="#" data-target="listing" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             </div>
-        </section>
+              
+            <div class="col input-field s4" >
+                <input placeholder="Student ID" style="border-radius:4px; color:white; background-color:#017c70" name="user_id" id="user_id" type="text">
+                <label for="user_id" style="color:white">Student ID</label>
+            </div>
 
-        <section>
-            <h1>Your Pokemon</h1>
+            <div class="col s5">
+              <button type="submit" class="waves-effect waves-light btn">Load PKMN</button>
+            </div>
+        </form> 
+        
+      </nav>
+    
+      <div class="row" style="height:100%; margin:0">
+          <article class="col s12 m6 l4" id="result" style="min-height:80%">
 
-            <table id="captured-pokemon">
-                <thead>
+            <!-- Begin Card Template -->
+            <!-- <div class="card">
+                <div class="card-image">
+                    <img class="teal" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="bulbasaur Image">  
+                </div>
+                <div class="card-content">
+                    <span class="card-title"><p>bulbasaur # 1</p></span>
+                    <p> Type1: grass</p>
+                    <p> Weight: 69</p>
+                    <p> Height: 7</p>
+                    <a onclick="catchPokemon(1)" id="catchBtn" style="position:absolute; right:15px; bottom:80px" class="btn-floating btn-large waves-effect waves-light red">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);font-size:40px; margin-top:8px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify" data-icon="mdi-pokeball" data-inline="false"><path fill="currentColor" d="M12 2a10 10 0 0 1 10 10a10 10 0 0 1-10 10A10 10 0 0 1 2 12A10 10 0 0 1 12 2m0 2c-4.08 0-7.45 3.05-7.94 7h4.07c.44-1.73 2.01-3 3.87-3c1.86 0 3.43 1.27 3.87 3h4.07c-.49-3.95-3.86-7-7.94-7m0 16c4.08 0 7.45-3.05 7.94-7h-4.07c-.44 1.73-2.01 3-3.87 3c-1.86 0-3.43-1.27-3.87-3H4.06c.49 3.95 3.86 7 7.94 7m0-10a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2Z"></path></svg>
+                    </a>
+                </div>
+            </div> -->
+            <!-- End Card Template -->
+
+          </article>
+
+          <article class="col s12 m6">
+              <table style="height:100%">
+                  <thead>
                     <tr>
-                        <th>Pokemon</th>
                         <th>Name</th>
-                        <th colspan="2">Actions</th>
+                        <th>Pokemon</th>
+                        <th>Action</th>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Charizard</td>
-                        <td>Roy</td>
-                        <td class="release-column">
-                            <form>
-                                <input type="text" class="text-input" placeholder="Enter new name" name="pokemon_name" required>
-                                <input class="btn" type="submit" value="Rename">
-                            </form>
-                        </td>
-                        <td>
-                            <a class="btn" href="#release">Release</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+                  </thead>
+      
+                  <tbody id="myPokeListing">
 
-    </main>
+                    <!-- Begin Table Row Template -->
+                    <!-- <tr>
+                      <td>rocky</td>
+                      <td>onix</td>
+                      <td>
+                        <button class="waves-effect waves-light btn" id="loadBtn" onclick="releasePokemon(5)">Release</button>
+                      </td>
+                    </tr> -->
+                    <!-- End Table Row Template -->
 
-    <footer>
-        <h1>Copywright</h1>
-    </footer>
+                  </tbody>
+                </table>
+          </article> 
+      </div>
 
-</body>
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="default.js"></script>
+    <script src="main.js"></script>
+
+  </body>
 </html>
