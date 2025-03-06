@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server --host=0.0.0.0 --port=8080 --no-browser",
+    "start": "npx --yes serve-p 8080",
     "test": "mocha || exit 0",
-    "update": "npm install --save testsuite1@latest"
+    "update": "npm install --save testsuite2@latest"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +15,6 @@
     "chai": "^4.2.0",
     "minimist": ">=1.2.5",
     "puppeteer": "^19.7.3",
-    "testsuite1": "^2.0.5",
-    "testsuite2": "^1.0.0"
+    "testsuite2": "^2.2.0"
   }
 }
